@@ -7,10 +7,14 @@ export interface ShortLinkProps {
 export const ShortLink = ({ url }: ShortLinkProps) => {
   return (
     <div className={css.shortlink}>
-      <a href={url}>{stripScheme(url)}</a>
+      <a href={ensureHttp(url)}>{stripScheme(url)}</a>
     </div>
   );
 };
+
+function ensureHttp(url: string): string {
+  return url.startsWith('http') ? url : `http://${url}`;
+}
 
 function stripScheme(url: string): string {
   return url.replace(/^https?:\/\//, "");
