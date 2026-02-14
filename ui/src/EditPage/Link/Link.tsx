@@ -12,7 +12,7 @@ export const Link = ({ name, host }: LinkProps) => {
   return (
     <div className={css.root}>
       <div className={css.link}>
-        <a href={url}>{url}</a>
+        <a href={url} rel="noreferrer">{url}</a>
       </div>
       <Copy text={url} />
     </div>

@@ -7,7 +7,7 @@ export interface ShortLinkProps {
 export const ShortLink = ({ url }: ShortLinkProps) => {
   return (
     <div className={css.shortlink}>
-      <a href={ensureHttp(url)}>{stripScheme(url)}</a>
+      <a href={ensureHttp(url)} rel="noreferrer">{stripScheme(url)}</a>
     </div>
   );
 };
