@@ -23,7 +23,18 @@ export const Copy = ({ text }: CopyProps) => {
   }, [active, setActive, ref]);
 
   const copyWasClicked = () => {
-    navigator.clipboard.writeText(text);
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+    } else if (document.execCommand && window.getSelection) {
+      const link = document.getElementsByTagName('a')[0];
+      const selection = window.getSelection()!;
+      const range = document.createRange();
+      range.selectNodeContents(link);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("copy");
+      selection.removeAllRanges();
+    }
     setActive(true);
   };
 
