@@ -1,14 +1,19 @@
 :root {
-  --background: #fff;
+  --background: #0d1117;
+  --background-muted: #151b23;
+  --background-error: #410000;
+  --url-input-background: #010409;
+  --shadow: #000;
 
-  --text-primary: #333;
-  --text-linkable: #09f;
+  --text-primary: #ccc;
+  --text-linkable: #58a6ff;
   --text-muted: #999;
-  --text-super-muted: #ccc;
-  --text-muted-emphasis: #666;
+  --text-super-muted: #666;
+  --text-muted-emphasis: #999;
+  --text-error: #f67f7f;
 
   --stroke-primary: #cfd3d3;
-  --stroke-emphasis: #09f;
+  --stroke-emphasis: #58a6ff;
 
   --edit-text-base-size: 42px;
 

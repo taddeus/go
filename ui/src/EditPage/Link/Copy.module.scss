@@ -3,7 +3,7 @@
 
   > .icon {
     color: var(--text-super-muted);
-    text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 var(--shadow);
     cursor: pointer;
 
     &:hover {

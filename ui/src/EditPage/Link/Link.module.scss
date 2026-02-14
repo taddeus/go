@@ -5,7 +5,8 @@
     flex-grow: 1;
 
     > a {
-      color: #09f;
+      font-size: 19px;
+      color: var(--text-linkable);
       text-decoration: none;
       flex-grow: 1;
     }

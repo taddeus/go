@@ -41,7 +41,9 @@ export const UrlInput = () => {
   return (
     <CenterForm onSubmit={formDidSubmit}>
       <div className={css.bar}>
-        <div className={clearButtonClass} onClick={clearButtonDidClick}></div>
+        <div className={clearButtonClass} onClick={clearButtonDidClick}>
+            <span className="material-symbols-outlined">delete</span>
+        </div>
         <input
           id="url"
           className={css.url}
